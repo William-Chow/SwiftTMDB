@@ -35,7 +35,7 @@ struct ContentView: View {
                 if searchText.isEmpty {
                     popularList = originalPopularList
                 } else {
-                    popularList = popularList.filter { $0.title.contains(searchText) }
+                    popularList = popularList.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
                 }
             }
         }
